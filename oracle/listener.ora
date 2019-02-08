@@ -1,0 +1,24 @@
+SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (SID_NAME = PLSExtProc)
+      (ORACLE_HOME = C:\oracle\database_1)
+      (PROGRAM = extproc)
+      (ENVS="EXTPROC_DLLS=ONLY:C:\oracle\database_1\bin\oraclr12.dll")
+    )
+    (SID_DESC =
+      (GLOBAL_DBNAME=sales.example.com)
+      (SID_NAME = sales)
+      (ORACLE_HOME = /u01/app/oracle)
+    )
+  )
+
+LISTENER =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+       (ADDRESS_LIST=
+          (ADDRESS = (PROTOCOL=ipc)(KEY=extproc1)(QUEUESIZE=50))
+          (ADDRESS = (PROTOCOL=tcp)(HOST=sales-server)(PORT=1521)
+        )
+    )
+  )
