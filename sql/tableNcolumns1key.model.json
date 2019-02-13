@@ -1,12 +1,12 @@
 {
   "tableNcolumns1key": {
     "table-name": {
-      "line1-key-value": {
+      "line1-value1": {
         "column1-name": "line1-value1",
         "column2-name": "line1-value2",
         "column3-name": "line1-value3"
       },
-      "line2-key-value": {
+      "line2-value1": {
         "column1-name": "line2-value1",
         "column2-name": "line2-value2",
         "column3-name": "line2-value3"
