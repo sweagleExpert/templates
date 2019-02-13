@@ -1,6 +1,6 @@
 {{
 /* This is used to update a key/value table on any SQL database */
-/* Strategy is to delete and insert again in case some keys were removed */
+/* Strategy is to delete all and insert all, to use in case some keys were removed or created */
 rootNode="table2columns";
 }}
 {{ if (metadataset[rootNode] == null) { }}

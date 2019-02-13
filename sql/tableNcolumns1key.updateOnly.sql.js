@@ -1,6 +1,6 @@
 {{
-/* This is used to update a key/value table on any SQL database */
-/* Strategy here is to update only in case you are sure no new or removed values */
+/* This is used to update a key/values table on any SQL database */
+/* Strategy here is to update only, in case you are sure no new or removed values */
 /* This strategy is also more secured than the delete & insert one */
 rootNode="tableNcolumns1key";
 keyColumnName="KEY";
