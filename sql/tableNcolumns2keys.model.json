@@ -1,0 +1,20 @@
+{
+  "tableNcolumns2keys": {
+    "table-name": {
+      "line1-key1-value": {
+        "line1-key2-value": {
+          "column1-name": "line1-value1",
+          "column2-name": "line1-value2",
+          "column3-name": "line1-value3"
+        }
+      },
+      "line2-key1-value": {
+        "line2-key2-value": {
+          "column1-name": "line2-value1",
+          "column2-name": "line2-value2",
+          "column3-name": "line2-value3"
+        }
+      }
+    }
+  }
+}

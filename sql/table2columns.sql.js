@@ -1,10 +1,10 @@
 {{
 /* This is used to update a key/value table on any SQL database */
-/* It is more easy to delete and insert again in case some keys were removed */
+/* Strategy is to delete and insert again in case some keys were removed */
 rootNode="table2columns";
 }}
 {{ if (metadataset[rootNode] == null) { }}
-ERROR: cannot find the root node !
+ERROR: Cannot find root node !
 {{ } else {
 metadataset = metadataset[rootNode];
 tableName = Object.keys(metadataset)[0];
