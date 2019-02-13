@@ -11,13 +11,13 @@ ERROR: cannot find the root node !
 metadataset = metadataset[rootNode];
 tableName = Object.keys(metadataset)[0];
 tableContent = metadataset[tableName];
-}}
-{{ for (keyVal in tableContent) { }}
+
+for (keyVal in tableContent) {
+    columnArray = Object.keys(tableContent[keyVal]);
+    valueArray = Object.values(tableContent[keyVal]); }}
 UPDATE {{= tableName }}
-  SET {{columnArray = Object.keys(tableContent[keyVal]);
-    valueArray = Object.values(tableContent[keyVal]);
-    i=0; while (i < columnArray.length-1) { }}
-    '{{= columnArray[i] }}' = '{{= valueArray[i] }}',{{ i++; } }}
-    '{{= columnArray[i] }}' = '{{= valueArray[i] }}'
+  SET {{ i=0; while (i < columnArray.length-1) { }}
+    {{= columnArray[i] }} = '{{= valueArray[i] }}',{{ i++; } }}
+    {{= columnArray[i] }} = '{{= valueArray[i] }}'
   WHERE {{= keyColumnName }} = '{{= keyVal }}';
 {{ } } }}
