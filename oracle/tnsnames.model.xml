@@ -11,7 +11,7 @@
  </DESCRIPTION>
 </sampleSimple>
 
-<sampleHA-xml>
+<sampleHA>
 	<DESCRIPTION>
 		<ADDRESS_LIST>
 			<LOAD_BALANCE>on</LOAD_BALANCE>
@@ -45,7 +45,7 @@
 			<SERVICE_NAME>myoracledb.example.com</SERVICE_NAME>
 		</CONNECT_DATA>
 	</DESCRIPTION>
-</sampleHA-xml>
+</sampleHA>
 
 <!-- # This is to illustrate a full options Oracle configuration -->
 <!-- # Some configuration items are redundant or useless -->
