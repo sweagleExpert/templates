@@ -22,3 +22,42 @@ LISTENER =
         )
     )
   )
+
+
+LISTENER=(ADDRESS_LIST=
+  			(ADDRESS=
+  				(PROTOCOL=IPC)
+  				(KEY=ny_finance.hq.fin.acme)
+  			)
+  			(ADDRESS=
+  				(PROTOCOL=IPC)
+  				(KEY=db3)
+  			)
+  			(ADDRESS=
+  				(COMMUNITY=tcpcomm)
+  				(PROTOCOL=TCP)
+  				(HOST=flash.hq.fin.acme)
+  				(PORT=1521)
+  			)
+  			(ADDRESS=
+  				(COMMUNITY=deccomm.hq.fin.acme)
+  				(PROTOCOL=DECNET)
+  				(NODE=flash.hq.fin.acme)
+  				(OBJECT=LSNR)
+  			)
+  		)
+
+SID_LIST_listener_name=[(SID_LIST=]
+      				(SID_DESC=
+      				   (GLOBAL_DBNAME=global_database_name)
+      				   (SID_NAME=SID)
+      				   (operating_system_specific_
+      				     string=db_location)
+      				)
+      				[(SID_DESC=
+      				   (GLOBAL_DBNAME=global_database_name)
+      				   (SID_NAME=SID)
+      				   (operating_system_specific_
+      				    string=db_location)
+      				)]
+      			    [)]

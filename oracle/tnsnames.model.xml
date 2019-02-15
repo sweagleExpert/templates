@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- As tnsnames.ora files may contains duplicates keys, it cannot be described in JSON -->
+<tnsnames.ora>
+
+<sampleSimple>
+ <DESCRIPTION>
+   <ADDRESS><PROTOCOL>tcp></PROTOCOL><HOST>host1</HOST><PORT>1521</PORT></ADDRESS>
+   <CONNECT_DATA>
+     <SERVICE_NAME>myoracledb.example.com</SERVICE_NAME>
+	 </CONNECT_DATA>
+ </DESCRIPTION>
+</sampleSimple>
+
+<sampleHA-xml>
+	<DESCRIPTION>
+		<ADDRESS_LIST>
+			<LOAD_BALANCE>on</LOAD_BALANCE>
+			<FAILOVER>off</FAILOVER>
+			<ADDRESS>
+				<PROTOCOL>tcp</PROTOCOL>
+				<HOST>host1</HOST>
+				<PORT>1521</PORT>
+			</ADDRESS>
+			<ADDRESS>
+				<PROTOCOL>tcp</PROTOCOL>
+				<HOST>host2</HOST>
+				<PORT>1521</PORT>
+			</ADDRESS>
+		</ADDRESS_LIST>
+		<ADDRESS_LIST>
+			<LOAD_BALANCE>off</LOAD_BALANCE>
+			<FAILOVER>on</FAILOVER>
+			<ADDRESS>
+				<PROTOCOL>tcp</PROTOCOL>
+				<HOST>host3</HOST>
+				<PORT>1521</PORT>
+			</ADDRESS>
+			<ADDRESS>
+				<PROTOCOL>tcp</PROTOCOL>
+				<HOST>host4</HOST>
+				<PORT>1521</PORT>
+			</ADDRESS>
+		</ADDRESS_LIST>
+		<CONNECT_DATA>
+			<SERVICE_NAME>myoracledb.example.com</SERVICE_NAME>
+		</CONNECT_DATA>
+	</DESCRIPTION>
+</sampleHA-xml>
+
+<!-- # This is to illustrate a full options Oracle configuration -->
+<!-- # Some configuration items are redundant or useless -->
+<SampleFullOptions>
+	<DESCRIPTION_LIST>
+		<SOURCE_ROUTE>on</SOURCE_ROUTE>
+		<!--   # SOURCE_ROUTE possible values on | off | yes | no -->
+		<DESCRIPTION>
+			<ADDRESS>
+				<PROTOCOL>IPC</PROTOCOL>
+				<KEY>EXTPROC1</KEY>
+			</ADDRESS>
+			<CONNECT_DATA>
+				<SERVICE_NAME>generic</SERVICE_NAME>
+				<RDB_DATABASE>[.mf]mf_personal.rdb</RDB_DATABASE>
+				<GLOBAL_NAME>alpha5</GLOBAL_NAME>
+			</CONNECT_DATA>
+			<TYPE_OF_SERVICE>rdb_database</TYPE_OF_SERVICE>
+		</DESCRIPTION>
+		<DESCRIPTION>
+			<SDU>8192</SDU>
+			<SEND_BUF_SIZE>11784</SEND_BUF_SIZE>
+			<RECV_BUF_SIZE>11784</RECV_BUF_SIZE>
+			<ENABLE>broken</ENABLE>
+			<SOURCE_ROUTE>off</SOURCE_ROUTE>
+			<ADDRESS_LIST>
+				<SOURCE_ROUTE>off</SOURCE_ROUTE>
+				<LOAD_BALANCE>off</LOAD_BALANCE>
+				<!-- # LOAD_BALANCE possible values on | off | yes | no | true | false -->
+				<FAILOVER>on</FAILOVER>
+				<!-- # FAILOVER possible values on | off | yes | no | true | false -->
+				<ADDRESS>
+					<PROTOCOL>tcp</PROTOCOL>
+					<HOST>host1</HOST>
+					<PORT>1521</PORT>
+					<SEND_BUF_SIZE>11784</SEND_BUF_SIZE>
+					<RECV_BUF_SIZE>11784</RECV_BUF_SIZE>
+				</ADDRESS>
+				<ADDRESS>
+					<PROTOCOL>tcp</PROTOCOL>
+					<HOST>host2</HOST>
+					<PORT>1521</PORT>
+					<SEND_BUF_SIZE>11784</SEND_BUF_SIZE>
+					<RECV_BUF_SIZE>11784</RECV_BUF_SIZE>
+				</ADDRESS>
+			</ADDRESS_LIST>
+			<CONNECT_DATA>
+				<SERVER_NAME>sales.us.example.com</SERVER_NAME>
+				<SERVER>dedicated</SERVER>
+				<!-- # SERVER possible values dedicated | shared | pooled -->
+				<SID>sales</SID>
+				<PRESENTATION>RO</PRESENTATION>
+				<HS>ok</HS>
+				<INSTANCE_ROLE>any</INSTANCE_ROLE>
+				<!-- # INSTANCE_ROLE possible values primary | secondary | any -->
+				<FAILOVER_MODE>
+					<BACKUP>sales2.example.com</BACKUP>
+					<TYPE>select</TYPE>
+					<METHOD>basic</METHOD>
+					<RETRIES>20</RETRIES>
+					<DELAY>15</DELAY>
+				</FAILOVER_MODE>
+				<SERVICE_NAME>sales.us.example.com</SERVICE_NAME>
+				<INSTANCE_NAME>sales1</INSTANCE_NAME>
+			</CONNECT_DATA>
+			<TYPE_OF_SERVICE>oracle9_database</TYPE_OF_SERVICE>
+			<SECURITY>
+				<SSL_SERVER_CERT_DN>"cn=sales,cn=Oracle,dc=example,dc=com"></SSL_SERVER_CERT_DN>
+			</SECURITY>
+		</DESCRIPTION>
+	</DESCRIPTION_LIST>
+</SampleFullOptions>
+
+</tnsnames.ora>

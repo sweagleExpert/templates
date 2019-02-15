@@ -1,0 +1,9 @@
+{
+  "table2columns": {
+    "table-name": {
+      "column1-key1": "column2-value1",
+      "column1-key2": "column2-value2",
+      "column1-key3": "column2-value3"
+    }
+  }
+}

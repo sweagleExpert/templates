@@ -69,4 +69,4 @@ SampleFullOptions=
     (INSTANCE_NAME=sales1))
    (TYPE_OF_SERVICE=oracle9_database)
    (SECURITY=
-    (SSL_SERVER_CERT_DN="cn=sales,cn=Oracle,dc=example,dc=com")))
+    (SSL_SERVER_CERT_DN="cn=sales,cn=Oracle,dc=example,dc=com"))))
