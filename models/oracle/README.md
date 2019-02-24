@@ -1,4 +1,4 @@
-# ORACLE CONFIGURATION FILE RULES
+# ORACLE CONFIGURATION FILE SYNTAX RULES
   # Any keyword in a configuration file that should be recognized as beginning a parameter that includes one or more keyword-value pairs must be in the far left column of a line. If it is indented by one or more spaces, it is interpreted as a continuation of the previous line.
   # All characters must belong to the network character set (see the next section).
   # Keywords are not case sensitive. Values may be case sensitive, depending on the operating system and protocol.
@@ -13,7 +13,7 @@
   # SERVER possible values dedicated | shared | pooled
   # INSTANCE_ROLE possible values primary | secondary | any
   # PROTOCOL possible values are IPC | BEQ | TCP | SSL | RAW
-  
-#EXAMPLE
+
+# EXAMPLE
   # This is to illustrate a full options Oracle configuration
   # Some configuration items are redundant or useless
