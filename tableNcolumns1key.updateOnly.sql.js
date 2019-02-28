@@ -3,7 +3,7 @@
 /* Strategy here is to update only, in case you are sure no new or removed values */
 /* This strategy is also more secured than the delete & insert one */
 rootNode="tableNcolumns1key";
-keyColumnName="KEY";
+keyColumnName="column1-name";
 }}
 {{ if (metadataset[rootNode] == null) { }}
 ERROR: cannot find the root node !
