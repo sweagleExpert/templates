@@ -1,0 +1,19 @@
+{
+  "DeploymentManifest": {
+    "Environment": {
+      "server-type1": {
+        "key3": "value33"
+      },
+      "server-type2": {
+        "key3": "value3",
+        "key4": "value4"
+      },
+      "key1": "value1",
+      "key2": "value2",
+      "key4": "@@token@@"
+    },
+    "xxx-token-values": {
+      "token": "token-value-123"
+    }
+  }
+}

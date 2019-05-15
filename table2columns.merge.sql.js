@@ -18,32 +18,3 @@ WHEN MATCHED THEN UPDATE SET {{= firstColumnName }}='{{= key }}' , {{= secondCol
 WHEN NOT MATCHED THEN INSERT ({{= firstColumnName }},{{= secondColumnName }})
     VALUES ('{{= key }}', '{{= tableContent[key] }}' );
 {{ } } }}
-
-
-
-
-INSERT INTO {{= tableName }} VALUES ('{{= key }}', '{{= tableContent[key] }}');
-{{ } } }}
-
-
-
-{{
-// Put here your table parameters
-var tableName="FWPARAMKILPRO";
-
-// define root node where all table records are available
-var rootNode = metadataset["FWPARAMKILPRO.tsv"];
-}}
-{{
-nodeName = Object.keys(metadataset)[0];
-metadataset = metadataset[nodeName];
-}}
-
-{{=metadataset["FWPARAMKILPROKY"]}}
-{{ for(var FWPARAMKILDAT1 in metadataset.4343YES) { }}
-toto
-{{ } }}
-
-
-
-{{= rootNode }}
